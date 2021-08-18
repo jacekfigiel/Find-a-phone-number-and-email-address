@@ -1,7 +1,7 @@
-import re
+import re, pyperclip
+"""just press CTRL+a then CTRL+c and run a program, list is ready"""
 
-websideText = open("st georges.txt")
-text = websideText.read()
+text = str(pyperclip.paste())
 
 phone_number = re.findall(r"\d\d\d \d\d\d\d \d\d\d\d", text)
 for n in phone_number:
